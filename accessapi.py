@@ -5,5 +5,8 @@ prompt = 'tell me slogan for a security company'
 
 output = openai.Completion.create(
     model = 'text-davinci-003',
-    prompt = 
+    prompt = prompt,
+    max_tokens=200,
+    temperature =0
 )
+print(output)
