@@ -1,6 +1,6 @@
 import openai
 prompt = 'tell me slogan for a security company'
-secret_key = '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'
+secret_key = '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'
 openai.api_key = secret_key
 
 
@@ -10,4 +10,5 @@ output = openai.Completion.create(
     max_tokens=200,
     temperature=0
 )
-print(output)
+output_text=output['choices'][0]['text']
+print(output_text)
